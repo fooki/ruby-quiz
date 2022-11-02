@@ -8,6 +8,13 @@ describe QuizRunner do
     runner.start_quiz
 
     output = buffer.string
-    expect(output).to eq("Welcome to the Ruby quiz!\n")
+    expected=<<~OUTPUT
+    Welcome to the Ruby quiz!
+    Who painted the Mona Lisa?
+    A:Van Gogh
+    B:Karl Johansson
+    C:Da Vinci
+    OUTPUT
+    expect(output).to eq(expected)
   end
 end
